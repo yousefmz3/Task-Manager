@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Edit task details in TaskFlow." />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./normalize.css" />
+  <!-- main -->
+  <link rel="stylesheet" href="./main.css" />
+  <title>Edit Tasks</title>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="header-icon">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <span class="header-title">TaskFlow</span>
+    </div>
+    <span class="header-badge">Edit Task</span>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="edit-page-wrapper">
+
+    <form class="single-task-form" id="edit-form">
+      <h4><i class="fas fa-pen"></i> Edit Task</h4>
+
+      <!-- Task ID -->
+      <div class="form-row">
+        <label>Task ID</label>
+        <p class="task-edit-id"></p>
+      </div>
+
+      <!-- Task Name -->
+      <div class="form-row">
+        <label for="edit-name">Task Name</label>
+        <input type="text" id="edit-name" name="name" class="task-edit-name" />
+      </div>
+
+      <!-- Completed Toggle -->
+      <div class="toggle-row">
+        <label class="toggle-switch">
+          <input type="checkbox" name="completed" class="task-edit-completed" id="edit-completed" />
+          <span class="toggle-slider"></span>
+        </label>
+        <label for="edit-completed">Mark as Completed</label>
+      </div>
+
+      <button type="submit" class="btn block task-edit-btn">
+        <i class="fas fa-save"></i>
+        Save Changes
+      </button>
+      <div class="form-alert"></div>
+    </form>
+
+    <a href="index.html" class="btn back-link">
+      <i class="fas fa-arrow-left"></i>
+      Back to Tasks
+    </a>
+
+  </main>
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- js -->
+  <script src="./edit-task.js"></script>
+</body>
+
+</html>
